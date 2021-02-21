@@ -1,0 +1,133 @@
+
+<html lang="en">
+<title> Calendar  </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/d3fd9d5f94.js" crossorigin="anonymous"></script>
+<link rel="icon" href="logo.jpg">
+<meta name="theme-color" content="#910200">
+
+<style>
+    body{
+        overflow-x: hidden;
+        background-color: #eafcf5;
+    }
+    #main{
+        text-align: center;
+        color: darkred; font-family: sans-serif; font-size: 62px; font-weight: 600;
+    }
+    div#footer{
+        position:relative; bottom:0; right:50%;
+        margin: 10px auto -20px auto; transform: translateX(50%);
+        font-family: monospace; font-size: 25px;
+        text-align: center; padding: 0;
+    }
+    div#footer h6:not(:last-child){
+        margin: 2px auto; font-weight: 100;
+    }
+    div#footer hr{
+        height: 1px; width: 100%; border: 0;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    }
+    h6#copyright{
+        text-align: right;
+        font-family: "Times New Roman";
+        font-weight: 400;
+        margin-top: 5px;
+    }
+    div.container{
+        text-align: center;
+        width: 92%;
+        position: relative;
+        right: -50%;
+        transform: translateX(-50%);
+        border: dashed red 1px;
+        padding: 18px;
+    }
+    div.month{
+        border: dotted 1px darkcyan;
+        display: inline-grid;
+        width: 23.5%;
+        margin: 10px;
+
+    }
+    div.day{
+        color: #0d4482;
+        display: flex;
+        width: 20px;
+        height: 20px;
+        font-family: Dubai;
+        font-size: medium;
+        margin: 3px;
+
+    }
+    div.monthname{
+        font-size: xx-large;
+        color: #ed3330;
+        text-align: center;
+    }
+    .dayrow{
+        font-family: "Droid Sans Mono";
+        cursor: pointer;
+    }
+    td{
+
+        margin-bottom: 2px;
+        padding-left: 18px;
+    }
+    td:hover{
+        color: #0a41e5;
+        background-color: greenyellow;
+    }
+
+    @media only screen and (max-width: 600px) {
+        body{
+            overflow-x: hidden;
+        }
+        div.container {
+            width: 98%;
+            padding: 4px;
+        }
+        div.month{
+            margin: auto;
+            display: block;
+            width: auto;
+            margin: 10px;
+        }
+        .monthcontainer{
+            margin: auto;
+        }
+        tbody{
+            width: 80%;
+        }
+        tr th,td{
+            padding-right: 10px;
+        }
+}
+
+     
+</style>
+    
+<body>
+    <h1 id="main"> 2020 Calendar</h1>
+
+    <div class="container">
+
+
+    </div>
+
+
+    <div id="footer">
+        <hr>
+        <h6>Made with <img style="width: 25px; height: 25px; margin: auto auto -4px -4px" src="js.png"></h6>
+        <h6>Hosted with <i style="color: red" class="fa fa-heart" aria-hidden="true"></i> on <i class="fa fa-github" aria-hidden="true"></i></h6>
+        <hr style="background-image: linear-gradient(90deg, rgba(212,154,190,0) 0%, rgba(234,86,126,0.21612394957983194) 27%, rgba(242,62,103,0.27494747899159666) 46%, rgba(253,29,71,0.13209033613445376) 73%, rgba(181,0,34,1) 99%)">
+        <h6 id="copyright"> <i class="fa fa-copyright" aria-hidden="true"></i> Prashik Deshpande</h6>
+
+    </div>
+
+    <script type="text/javascript" src="calendar.js"></script>
+
+</body>
+</html>
+
